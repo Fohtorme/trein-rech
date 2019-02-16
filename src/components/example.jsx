@@ -1,0 +1,47 @@
+import React, { Component } from "react";
+import ButtonGroup from "./buttonGroup";
+import Button from "./button";
+
+class Example extends Component {
+  state = { selectedButton: 1 };
+
+  handleOnClick = button => {
+    this.setState({ selectedButton: button.id });
+  };
+
+  render() {
+    const { selectedButton } = this.state;
+
+    const buttons = [
+      {
+        id: 1,
+        label: "Botão 1",
+        onClick: () => this.handleOnClick(buttons[0])
+      },
+      {
+        id: 2,
+        label: "Botão 2",
+        onClick: () => this.handleOnClick(buttons[1])
+      },
+      {
+        id: 3,
+        label: "Botão 3",
+        onClick: () => this.handleOnClick(buttons[2])
+      }
+    ];
+
+    return (
+      <div>
+        <ButtonGroup buttons={buttons} selectedButton={selectedButton} />
+        <Button
+          onClick={() => this.handleOnClick(buttons[0])}
+          style={{ backgroundColor: "red" }}
+        >
+          Outro botão
+        </Button>
+      </div>
+    );
+  }
+}
+
+export default Example;
