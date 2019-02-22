@@ -1,0 +1,34 @@
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Example from "./components/example";
+import CharacterSelection from "./menu/characterSelection";
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        {/* <Example /> */}
+        {/* <CharacterSelection /> */}
+        <div>-----------------------------------------------------</div>
+
+        <table>
+          <tr>
+            <th>OI</th>
+            <th>OI</th>
+            <th>OI</th>
+            <th>OI</th>
+          </tr>
+          <tbody>
+            <td>r2134r21</td>
+            <td>r2134r21</td>
+            <td>r2134r21</td>
+            <td>r2134r21</td>
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+}
+
+export default App;

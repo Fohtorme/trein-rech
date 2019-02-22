@@ -1,0 +1,23 @@
+import React, { Component } from 'react';
+
+class Table extends Component {
+    state = {  }
+    render() {
+        return ( <table className="table">
+            <thead>
+                <th>ID</th>
+                <th>Descriçã</th>
+                <th>afioaofa</th>
+                <th>asodoasdaos</th>
+            </thead>
+            <tbody>
+                <tr>1</tr>
+                <tr>2</tr>
+                <tr>3</tr>
+                <tr>4</tr>
+            </tbody>
+        </table> );
+    }
+}
+
+export default Table;

@@ -1,0 +1,12 @@
+import React, { Component } from 'react';
+
+
+
+class Teste extends Component {
+    state = {  }
+    render() {
+        return Button;
+    }
+}
+
+export default Teste;

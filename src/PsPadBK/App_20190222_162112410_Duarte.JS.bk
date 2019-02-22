@@ -9,14 +9,6 @@ class App extends Component {
   state = {
     data: getData()
   };
-
-  handleDelete = protocolo => {
-    let array = this.state.data;
-    let idx = array.findIndex(p => p.codigo === protocolo.codigo);
-    array[idx] = {};
-    this.setState({ data: array });
-  };
-
   render() {
     const { data } = this.state;
     return (
@@ -30,20 +22,17 @@ class App extends Component {
             <tr>
               <th>Protocolo</th>
               <th>Descricao</th>
-              <th>Deletar</th>
             </tr>
           </thead>
           <tbody>
             {data.map(protocolo => {
               const { codigo, descricao } = protocolo;
               return (
-                <tr key={codigo}>
+                <tr>
                   <td>{codigo}</td>
                   <td>{descricao}</td>
                   <td>
-                    <button onClick={() => this.handleDelete(protocolo)}>
-                      X
-                    </button>
+                    <button onClick={""}>X</button>
                   </td>
                 </tr>
               );

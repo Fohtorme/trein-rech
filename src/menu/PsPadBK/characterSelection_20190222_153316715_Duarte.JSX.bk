@@ -29,6 +29,7 @@ class CharacterSelection extends Component {
 
   render() {
     const { players } = this.state;
+
     return (
       <React.Fragment>
         {PERSONAGENS.map(personagem => (

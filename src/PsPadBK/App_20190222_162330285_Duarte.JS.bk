@@ -11,10 +11,7 @@ class App extends Component {
   };
 
   handleDelete = protocolo => {
-    let array = this.state.data;
-    let idx = array.findIndex(p => p.codigo === protocolo.codigo);
-    array[idx] = {};
-    this.setState({ data: array });
+    console.log("tezte");
   };
 
   render() {
@@ -37,13 +34,11 @@ class App extends Component {
             {data.map(protocolo => {
               const { codigo, descricao } = protocolo;
               return (
-                <tr key={codigo}>
+                <tr>
                   <td>{codigo}</td>
                   <td>{descricao}</td>
                   <td>
-                    <button onClick={() => this.handleDelete(protocolo)}>
-                      X
-                    </button>
+                    <button onClick={this.handleDelete}>X</button>
                   </td>
                 </tr>
               );

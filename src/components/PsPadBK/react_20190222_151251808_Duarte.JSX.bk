@@ -1,0 +1,18 @@
+import React, { Component } from "react";
+
+class Teste extends Component {
+  state = {};
+  render() {
+    return (
+      <div className="class">
+        <th />
+        <Componetn />
+        <th />
+        <th />
+        <th />
+      </div>
+    );
+  }
+}
+
+export default Teste;

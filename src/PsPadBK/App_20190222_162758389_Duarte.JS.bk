@@ -12,7 +12,7 @@ class App extends Component {
 
   handleDelete = protocolo => {
     let array = this.state.data;
-    let idx = array.findIndex(p => p.codigo === protocolo.codigo);
+    let idx = array.findIndex(p => p.protocolo.codigo === protocolo.codigo);
     array[idx] = {};
     this.setState({ data: array });
   };

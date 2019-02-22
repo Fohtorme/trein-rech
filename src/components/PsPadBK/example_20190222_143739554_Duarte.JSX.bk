@@ -15,7 +15,6 @@ class Example extends Component {
     const buttons = [
       {
         id: 1,
-
         label: "Botão 1",
         onClick: () => this.handleOnClick(buttons[0])
       },

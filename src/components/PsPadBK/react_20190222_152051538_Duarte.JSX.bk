@@ -1,0 +1,9 @@
+import React, { Component } from "react";
+
+const Teste = () => {
+  return <button style={{ backgroundColor: "red" }} />;
+};
+
+export default Teste;
+
+const styleButton = [{ backgroundColor: "red" }];

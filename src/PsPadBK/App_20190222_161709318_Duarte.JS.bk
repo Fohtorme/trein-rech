@@ -1,0 +1,40 @@
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Example from "./components/example";
+import CharacterSelection from "./menu/characterSelection";
+import getData from "./components/data";
+
+class App extends Component {
+  state = {
+    data: getData()
+  };
+  render() {
+    return (
+      <div>
+        {/* <Example /> */}
+        {/* <CharacterSelection /> */}
+        {/* <div>-----------------------------------------------------</div> */}
+
+        <table>
+          <tr>
+            <th>Protocolo</th>
+            <th>Descricao</th>
+          </tr>
+          <tbody>
+            {data.map(protocolo => {
+              const {codigo, descricao} = protocolo;
+              return (
+                <td>{codigo}</td>
+                <td>{descricao}</td>
+                <td>r2134r21</td>
+                <td>r2134r21</td>)
+            })}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+}
+
+export default App;
